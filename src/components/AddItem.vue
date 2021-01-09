@@ -1,5 +1,6 @@
 <template>
   <form>
+    <b>Add Item to Cart</b>
     <label for="name">Item</label>
     <input type="text" v-model="newItem.name" />
 
@@ -20,3 +21,17 @@ export default {
   },
 };
 </script>
+
+<style scope>
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  width: auto;
+  margin: 4px;
+}
+</style>

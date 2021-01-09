@@ -13,12 +13,14 @@
           Subtotal
         </b>
       </td>
+      <td></td>
     </tr>
     <tr>
       <td></td>
       <td></td>
       <td> {{ totalItems }} </td>
       <td>€{{ subTotal }} </td>
+      <td></td>
     </tr>
   </span>
 </template>
@@ -26,8 +28,8 @@
 <script>
 export default {
   props: {
-    totalItems: Function,
-    subTotal: Function,
+    totalItems: Number,
+    subTotal: Number,
   },
 };
 </script>

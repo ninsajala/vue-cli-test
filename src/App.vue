@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="shoppingCart">
+    <h1>Vue Shopping Cart</h1>
     <table>
       <thead>
         <tr>
@@ -7,6 +8,7 @@
           <th>Price</th>
           <th>Amount</th>
           <th>Total</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -87,10 +89,11 @@ export default {
 
 table {
   border: 2px solid black;
+  margin: 50px;
 }
 
 tr {
-  width: 400px;
+  width: 450px;
 }
 
 th {

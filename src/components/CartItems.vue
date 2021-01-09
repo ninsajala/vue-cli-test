@@ -5,6 +5,7 @@
       <td>{{ item.price }}</td>
       <td> {{ item.amount }} </td>
       <td>{{ item.price * item.amount }} </td>
+      <td><button @click="cartItems.splice(index, 1)">Remove</button></td>
     </tr>
   </span>
 </template>
@@ -19,7 +20,7 @@ export default {
 
 <style scope>
 tr {
-  width: 400px;
+  width: 450px;
   display: flex;
   justify-content: space-evenly;
 }
