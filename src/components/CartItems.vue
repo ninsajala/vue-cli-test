@@ -3,9 +3,13 @@
     <tr v-for="(item, index) in cartItems" :key="index">
       <td>{{ item.name }} </td>
       <td>{{ item.price }}</td>
-      <td> {{ item.amount }} </td>
+      <td> <input v-model="item.amount" type="number" /> </td>
       <td>{{ item.price * item.amount }} </td>
-      <td><button @click="cartItems.splice(index, 1)">Remove</button></td>
+      <td>
+        <b-button variant="danger" @click="cartItems.splice(index, 1)"
+          ><i class="fas fa-trash-alt"></i
+        ></b-button>
+      </td>
     </tr>
   </span>
 </template>
@@ -23,9 +27,16 @@ tr {
   width: 450px;
   display: flex;
   justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
 }
 td {
   width: 50px;
+  text-align: center;
+}
+
+input {
+  width: 40px;
   text-align: center;
 }
 </style>

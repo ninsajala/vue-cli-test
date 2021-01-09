@@ -1,16 +1,18 @@
 <template>
-  <form>
+  <b-form>
     <b>Add Item to Cart</b>
     <label for="name">Item</label>
-    <input type="text" v-model="newItem.name" />
+    <input class="input-small" size="sm" type="text" v-model="newItem.name" />
 
     <label for="price">Price</label>
-    <input type="number" v-model="newItem.price" />
+    <input class="input-small" size="sm" type="number" v-model="newItem.price" />
 
     <label for="amount">Amount</label>
-    <input type="number" v-model="newItem.amount" />
-    <button @click.prevent="addItem">Add</button>
-  </form>
+    <input class="input-small" size="sm" type="number" v-model="newItem.amount" />
+    <b-button variant="outline-primary" @click.prevent="addItem"
+    :disabled="!newItem.name.length || newItem.amount < 1 || newItem.price <= 0"
+    >Add</b-button>
+  </b-form>
 </template>
 
 <script>
@@ -28,10 +30,18 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: solid black 1px;
+  padding: 5px;
+  border-radius: 10px;
 }
 
-button {
+b-button {
   width: auto;
-  margin: 4px;
+}
+
+form input {
+  text-align: center;
+  margin-bottom: 5px !important;
+  width: 100px;
 }
 </style>

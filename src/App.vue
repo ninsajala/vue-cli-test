@@ -41,12 +41,12 @@ export default {
       },
       cartItems: [
         {
-          name: 'Zaklamp',
+          name: 'Book',
           price: 4.5,
           amount: 2,
         },
         {
-          name: 'Wijnglas',
+          name: 'Lamp',
           price: 5.85,
           amount: 1,
         },
@@ -67,7 +67,7 @@ export default {
     },
     totalItems() {
       let totalAmount = 0;
-      this.cartItems.forEach((item) => (totalAmount += item.amount));
+      this.cartItems.forEach((item) => (totalAmount += Number(item.amount)));
       return totalAmount;
     },
   },
