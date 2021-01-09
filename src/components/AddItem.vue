@@ -1,8 +1,13 @@
 <template>
-  <form >
-    <input type="text" :newItem="newItem.name"/>
-    <input type="number" :newItem="newItem.price" />
-    <input type="number" :newItem="newItem.amount" />
+  <form>
+    <label for="name">Item</label>
+    <input type="text" v-model="newItem.name" />
+
+    <label for="price">Price</label>
+    <input type="number" v-model="newItem.price" />
+
+    <label for="amount">Amount</label>
+    <input type="number" v-model="newItem.amount" />
     <button @click.prevent="addItem">Add</button>
   </form>
 </template>

@@ -94,6 +94,7 @@ tr {
 }
 
 th {
-  width: 50px;
+  width: 100px;
+  text-align: center;
 }
 </style>
