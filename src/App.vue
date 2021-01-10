@@ -93,7 +93,11 @@ table {
 }
 
 tr {
-  width: 450px;
+   width: 450px;
+  display: flex;
+  justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
 }
 
 th {

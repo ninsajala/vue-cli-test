@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 tr {
   width: 450px;
   display: flex;
@@ -31,7 +31,7 @@ tr {
   align-items: center;
 }
 td {
-  width: 50px;
+  width: 100px;
   text-align: center;
 }
 

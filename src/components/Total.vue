@@ -34,11 +34,13 @@ export default {
 };
 </script>
 
-<style scope>
+<style scoped>
 tr {
-  width: 400px;
+  width: 450px;
   display: flex;
   justify-content: space-evenly;
+  height: 50px;
+  align-items: center;
 }
 td {
   width: 100px;
